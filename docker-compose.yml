@@ -1,0 +1,16 @@
+services:
+  mc-proxy:
+    build: .
+    environment:
+      BACKEND_HOST: "192.168.1.50"
+      BACKEND_PORT: "25565"
+      BACKEND_MAC:  "AA:BB:CC:DD:EE:FF"
+      WOL_BROADCAST: "192.168.1.255"
+      MC_VERSION: "1.16.5"
+      PROXY_PORT: "25565"
+    ports:
+      - "25565:25565/tcp"
+      - "25565:25565/udp"
+    cap_add:
+      - NET_RAW
+    restart: unless-stopped
