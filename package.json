@@ -1,0 +1,9 @@
+{
+  "name": "mc-wol-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "wakeonlan": "^1.0.4",
+    "minecraft-protocol": "^1.16.5"
+  }
+}
